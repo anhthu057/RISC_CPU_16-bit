@@ -1,0 +1,25 @@
+0.7
+2020.2
+Oct 13 2023
+20:47:58
+D:/pj/PROJECT/PROJECT.sim/sim_1/behav/xsim/glbl.v,1697210495,verilog,,,,glbl,,,,,,,,
+D:/pj/PROJECT/PROJECT.srcs/sources_1/new/ALU_System.v,1767281134,verilog,,D:/pj/PROJECT/PROJECT.srcs/sources_1/new/EX_MEM_Register.v,,ALU;ALU_System;MUX_3_to_1;MUX_ALU,,,,,,,,
+D:/pj/PROJECT/PROJECT.srcs/sources_1/new/EX_MEM_Register.v,1767280490,verilog,,D:/pj/PROJECT/PROJECT.srcs/sources_1/new/EX_Stage.v,,EX_MEM_Register,,,,,,,,
+D:/pj/PROJECT/PROJECT.srcs/sources_1/new/EX_Stage.v,1767280490,verilog,,D:/pj/PROJECT/PROJECT.srcs/sources_1/new/Forwarding_Unit.v,,EX_Stage,,,,,,,,
+D:/pj/PROJECT/PROJECT.srcs/sources_1/new/Forwarding_Unit.v,1767280490,verilog,,D:/pj/PROJECT/PROJECT.srcs/sources_1/new/ID_EX_Register.v,,Forwarding_Unit,,,,,,,,
+D:/pj/PROJECT/PROJECT.srcs/sources_1/new/ID_EX_Register.v,1767280490,verilog,,D:/pj/PROJECT/PROJECT.srcs/sources_1/new/ID_Stage.v,,ID_EX_Register,,,,,,,,
+D:/pj/PROJECT/PROJECT.srcs/sources_1/new/ID_Stage.v,1767280490,verilog,,D:/pj/PROJECT/PROJECT.srcs/sources_1/new/IF_ID_Register.v,,ID_Stage,,,,,,,,
+D:/pj/PROJECT/PROJECT.srcs/sources_1/new/IF_ID_Register.v,1767280490,verilog,,D:/pj/PROJECT/PROJECT.srcs/sources_1/new/IF_Stage.v,,IF_ID_Register,,,,,,,,
+D:/pj/PROJECT/PROJECT.srcs/sources_1/new/IF_Stage.v,1767280490,verilog,,D:/pj/PROJECT/PROJECT.srcs/sources_1/new/IM.v,,IF_Stage,,,,,,,,
+D:/pj/PROJECT/PROJECT.srcs/sources_1/new/IM.v,1767280490,verilog,,D:/pj/PROJECT/PROJECT.srcs/sources_1/new/MEM_Stage.v,,IM,,,,,,,,
+D:/pj/PROJECT/PROJECT.srcs/sources_1/new/MEM_Stage.v,1767280490,verilog,,D:/pj/PROJECT/PROJECT.srcs/sources_1/new/MEM_WB_Register.v,,MEM_Stage,,,,,,,,
+D:/pj/PROJECT/PROJECT.srcs/sources_1/new/MEM_WB_Register.v,1767280490,verilog,,D:/pj/PROJECT/PROJECT.srcs/sources_1/new/MUX_DataMemory.v,,MEM_WB_Register,,,,,,,,
+D:/pj/PROJECT/PROJECT.srcs/sources_1/new/MUX_DataMemory.v,1767280490,verilog,,D:/pj/PROJECT/PROJECT.srcs/sources_1/new/PC_System.v,,MUX_DataMemory,,,,,,,,
+D:/pj/PROJECT/PROJECT.srcs/sources_1/new/PC_System.v,1767280490,verilog,,D:/pj/PROJECT/PROJECT.srcs/sources_1/new/WRITEBACK_Stage.v,,ADD_PC;MUX_PC;PC;PC_System,,,,,,,,
+D:/pj/PROJECT/PROJECT.srcs/sources_1/new/TOP.v,1767862991,verilog,,,,TOP;TOP_tb,,,,,,,,
+D:/pj/PROJECT/PROJECT.srcs/sources_1/new/WRITEBACK_Stage.v,1767280490,verilog,,D:/pj/PROJECT/PROJECT.srcs/sources_1/new/control_unit.v,,WRITEBACK_Stage,,,,,,,,
+D:/pj/PROJECT/PROJECT.srcs/sources_1/new/control_unit.v,1767280490,verilog,,D:/pj/PROJECT/PROJECT.srcs/sources_1/new/data_memory.v,,control_unit,,,,,,,,
+D:/pj/PROJECT/PROJECT.srcs/sources_1/new/data_memory.v,1767280490,verilog,,D:/pj/PROJECT/PROJECT.srcs/sources_1/new/hazard_detection_unit.v,,data_memory,,,,,,,,
+D:/pj/PROJECT/PROJECT.srcs/sources_1/new/hazard_detection_unit.v,1767280490,verilog,,D:/pj/PROJECT/PROJECT.srcs/sources_1/new/register_file.v,,MUX_Hazard;hazard_detection_unit,,,,,,,,
+D:/pj/PROJECT/PROJECT.srcs/sources_1/new/register_file.v,1767280490,verilog,,D:/pj/PROJECT/PROJECT.srcs/sources_1/new/sign_extend.v,,registers_file,,,,,,,,
+D:/pj/PROJECT/PROJECT.srcs/sources_1/new/sign_extend.v,1767280490,verilog,,D:/pj/PROJECT/PROJECT.srcs/sources_1/new/TOP.v,,sign_extend,,,,,,,,

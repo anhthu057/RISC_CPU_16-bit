@@ -1,0 +1,76 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Thu Jan  8 00:04:43 2026
+# Process ID: 17856
+# Current directory: D:/pj/PROJECT
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent25128 D:\pj\PROJECT\PROJECT.xpr
+# Log file: D:/pj/PROJECT/vivado.log
+# Journal file: D:/pj/PROJECT\vivado.jou
+# Running On: LAPTOP-L9MC2346, OS: Windows, CPU Frequency: 3110 MHz, CPU Physical cores: 12, Host memory: 16890 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/pj/PROJECT/PROJECT.xpr
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+copy_run -name synth_1_copy_1 [get_runs synth_1] 
+set_property part xc7z007sclg400-1 [current_project]
+reset_run synth_1
+delete_runs "synth_1_copy_1"
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+set_property part xc7z030fbg676-1 [current_project]
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+set_property part xa7z010clg225-1I [current_project]
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+set_property part xc7z010clg400-1 [current_project]
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+open_run synth_1 -name synth_1
+set_property IOSTANDARD LVCMOS33 [get_ports [list {pc_current[15]} {pc_current[14]} {pc_current[13]} {pc_current[12]} {pc_current[11]} {pc_current[10]} {pc_current[9]} {pc_current[8]} {pc_current[7]} {pc_current[6]} {pc_current[5]} {pc_current[4]} {pc_current[3]} {pc_current[2]} {pc_current[1]} {pc_current[0]}]]
+save_constraints
+reset_run impl_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+close_design
+open_run impl_1
+report_utilization -name utilization_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+launch_simulation
+source TOP_tb.tcl
+close_sim
+launch_simulation
+source TOP_tb.tcl
+close_sim
+launch_simulation
+source TOP_tb.tcl
+close_sim
+launch_simulation
+source TOP_tb.tcl
+close_sim
+launch_simulation
+source TOP_tb.tcl
+close_sim
+launch_simulation
+source TOP_tb.tcl
+close_sim
