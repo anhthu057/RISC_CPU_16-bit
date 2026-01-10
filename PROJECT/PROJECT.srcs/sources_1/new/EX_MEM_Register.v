@@ -31,8 +31,8 @@ module EX_MEM_Register(
     input wire EX_regWrite,
     input wire EX_memtoReg,
     input wire [1:0] EX_w_spec_regs,
-    input wire EX_hi_write,
-    input wire EX_lo_write,
+//    input wire EX_hi_write,
+//    input wire EX_lo_write,
     input wire EX_halt,
     
     input wire [15:0] EX_pc, // danh cho move from pc
@@ -48,8 +48,8 @@ module EX_MEM_Register(
     output reg MEM_regWrite,
     output reg MEM_memtoReg,
     output reg [1:0] MEM_w_spec_regs,
-    output reg MEM_hi_write,
-    output reg MEM_lo_write,
+//    output reg MEM_hi_write,
+//    output reg MEM_lo_write,
     output reg MEM_halt,
     
     output reg [15:0] MEM_pc,
@@ -70,8 +70,8 @@ module EX_MEM_Register(
             MEM_regWrite <= 1'b0;
             MEM_memtoReg <= 1'b0;
             MEM_w_spec_regs <= 2'b10;
-            MEM_hi_write <= 1'b0;
-            MEM_lo_write <= 1'b0;
+//            MEM_hi_write <= 1'b0;
+//            MEM_lo_write <= 1'b0;
             MEM_halt <= 1'b0;
             
             MEM_pc <= 16'h0000;
@@ -89,8 +89,8 @@ module EX_MEM_Register(
             MEM_regWrite <= EX_regWrite;
             MEM_memtoReg <= EX_memtoReg;
             MEM_w_spec_regs <= EX_w_spec_regs;
-            MEM_hi_write <= EX_hi_write;
-            MEM_lo_write <= EX_lo_write;
+//            MEM_hi_write <= EX_hi_write;
+//            MEM_lo_write <= EX_lo_write;
             MEM_halt <= EX_halt;
             
             MEM_pc <= EX_pc;

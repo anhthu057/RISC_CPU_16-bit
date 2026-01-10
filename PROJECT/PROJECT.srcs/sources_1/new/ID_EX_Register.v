@@ -33,8 +33,8 @@ module ID_EX_Register(
     input wire ID_memRead,
     input wire ID_regWrite,
     input wire ID_memToReg,
-    input wire ID_hi_write,
-    input wire ID_lo_write,
+//    input wire ID_hi_write,
+//    input wire ID_lo_write,
     input wire ID_halt,
     
     // du lieu tu id stage ne
@@ -69,8 +69,8 @@ module ID_EX_Register(
     output reg EX_memRead,
     output reg EX_regWrite,
     output reg EX_memToReg,
-    output reg EX_hi_write,
-    output reg EX_lo_write,
+//    output reg EX_hi_write,
+//    output reg EX_lo_write,
     output reg EX_halt,
     
     output reg [15:0] EX_pc,
@@ -98,8 +98,8 @@ module ID_EX_Register(
             EX_memRead <= 1'b0;
             EX_regWrite <= 1'b0;
             EX_memToReg <= 1'b0;
-            EX_hi_write <= 1'b0;
-            EX_lo_write <= 1'b0;
+//            EX_hi_write <= 1'b0;
+//            EX_lo_write <= 1'b0;
             EX_halt <= 1'b0;
             
             EX_pc <= 16'h0000;
@@ -124,8 +124,8 @@ module ID_EX_Register(
             EX_memRead <= ID_memRead;
             EX_regWrite <= ID_regWrite;
             EX_memToReg <= ID_memToReg;
-            EX_hi_write <= ID_hi_write;
-            EX_lo_write <= ID_lo_write;
+//            EX_hi_write <= ID_hi_write;
+//            EX_lo_write <= ID_lo_write;
             EX_halt <= ID_halt;
             
             EX_pc <= ID_pc;

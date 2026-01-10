@@ -47,10 +47,10 @@ module MUX_Hazard(
     input HazardMuxControl,
     input [5:0] ALU_cnt,
     input [1:0] PCSrc, r_spec_regs, w_spec_regs,
-    input regDst, ALUSrc, memWrite, memRead, regWrite, memToReg, hi_write, lo_write, halt,
+    input regDst, ALUSrc, memWrite, memRead, regWrite, memToReg, halt,
     output reg [5:0] ALU_cnt_out,
     output reg [1:0] PCSrc_out, r_spec_regs_out, w_spec_regs_out,
-    output reg regDst_out, ALUSrc_out, memWrite_out, memRead_out, regWrite_out, memToReg_out, hi_write_out, lo_write_out, halt_out
+    output reg regDst_out, ALUSrc_out, memWrite_out, memRead_out, regWrite_out, memToReg_out, halt_out
 );
 //    assign regDst_out = regDst & !HazardMuxControl;
 //    assign ALUSrc_out = ALUSrc & !HazardMuxControl;
@@ -75,8 +75,8 @@ module MUX_Hazard(
             regWrite_out = 1'b0;
             memToReg_out = 1'b0;
             PCSrc_out = 2'b00;
-            hi_write_out = 1'b0;
-            lo_write_out = 1'b0;
+//            hi_write_out = 1'b0;
+//            lo_write_out = 1'b0;
             r_spec_regs_out = 2'b11;
             w_spec_regs_out = 2'b10;
             halt_out = 1'b0;
@@ -90,8 +90,8 @@ module MUX_Hazard(
             regWrite_out = regWrite;
             memToReg_out = memToReg;
             PCSrc_out = PCSrc;
-            hi_write_out = hi_write;
-            lo_write_out = lo_write;
+//            hi_write_out = hi_write;
+//            lo_write_out = lo_write;
             r_spec_regs_out = r_spec_regs;
             w_spec_regs_out = w_spec_regs;
             halt_out = halt;

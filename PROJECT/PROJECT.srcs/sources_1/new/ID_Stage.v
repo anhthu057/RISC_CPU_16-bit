@@ -47,8 +47,8 @@ module ID_Stage(
     output wire memToReg,
     output wire [1:0] PCSrc,
     output wire [5:0] ALU_cnt,
-    output wire hi_write,
-    output wire lo_write,
+//    output wire hi_write,
+//    output wire lo_write,
     output wire [1:0] r_spec_regs,
     output wire [1:0] w_spec_regs,
     output wire halt,
@@ -90,8 +90,8 @@ module ID_Stage(
     wire [5:0] ALU_cnt_ctrl;
     wire [1:0] PCSrc_ctrl, r_spec_regs_ctrl, w_spec_regs_ctrl;
     wire regDst_ctrl, ALUSrc_ctrl, memWrite_ctrl, memRead_ctrl, regWrite_ctrl, 
-         memToReg_ctrl, hi_write_ctrl, lo_write_ctrl, halt_ctrl;
-    
+         memToReg_ctrl, halt_ctrl;
+//    hi_write_ctrl, lo_write_ctrl
     //==================================================
     // CONTROL UNIT
     //==================================================
@@ -107,8 +107,8 @@ module ID_Stage(
         .memRead(memRead_ctrl),
         .regWrite(regWrite_ctrl),
         .memToReg(memToReg_ctrl),
-        .hi_write(hi_write_ctrl),
-        .lo_write(lo_write_ctrl),
+//        .hi_write(hi_write_ctrl),
+//        .lo_write(lo_write_ctrl),
         .r_spec_regs(r_spec_regs_ctrl),
         .w_spec_regs(w_spec_regs_ctrl),
         .halt(halt_ctrl),
@@ -142,8 +142,8 @@ module ID_Stage(
         .memRead(memRead_ctrl),
         .regWrite(regWrite_ctrl),
         .memToReg(memToReg_ctrl),
-        .hi_write(hi_write_ctrl),
-        .lo_write(lo_write_ctrl),
+//        .hi_write(hi_write_ctrl),
+//        .lo_write(lo_write_ctrl),
         .r_spec_regs(r_spec_regs_ctrl),
         .w_spec_regs(w_spec_regs_ctrl),
         .halt(halt_ctrl),
@@ -157,8 +157,8 @@ module ID_Stage(
         .memRead_out(memRead),
         .regWrite_out(regWrite),
         .memToReg_out(memToReg),
-        .hi_write_out(hi_write),
-        .lo_write_out(lo_write),
+//        .hi_write_out(hi_write),
+//        .lo_write_out(lo_write),
         .r_spec_regs_out(r_spec_regs),
         .w_spec_regs_out(w_spec_regs),
         .halt_out(halt)

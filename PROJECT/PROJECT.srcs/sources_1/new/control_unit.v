@@ -23,7 +23,7 @@ input [3:0] opcode,
 input [2:0] funct,
 
 output reg [1:0] PCSrc, r_spec_regs, w_spec_regs,
-output reg regDst, ALUSrc, memWrite, memRead, regWrite, memToReg, hi_write, lo_write, halt,
+output reg regDst, ALUSrc, memWrite, memRead, regWrite, memToReg, halt,
 
 output reg[5:0] ALU_cnt,
 
@@ -39,8 +39,8 @@ always @(*) begin
         regWrite = 1'b0;
         memToReg = 1'b0;
         PCSrc = 2'b00;
-        hi_write = 1'b0;
-        lo_write = 1'b0;
+//        hi_write = 1'b0;
+//        lo_write = 1'b0;
         r_spec_regs = 2'b11;
         w_spec_regs = 2'b10;
         halt = 1'b0;
@@ -59,8 +59,8 @@ always @(*) begin
             regWrite = (funct == 3'b010 || funct == 3'b011)? 1'b0 : 1'b1;
             memToReg = 1'b0;
             PCSrc = 2'b00;
-            hi_write = 1'b0;
-            lo_write = 1'b0;
+//            hi_write = 1'b0;
+//            lo_write = 1'b0;
             r_spec_regs = 2'b11;
             w_spec_regs = 2'b10;
             is_jump = 1'b0;
@@ -86,8 +86,8 @@ always @(*) begin
             regWrite = (funct == 3'b111 || funct == 3'b010 || funct == 3'b011)? 1'b0 : 1'b1;
             memToReg = 1'b0;
             PCSrc = (funct == 3'b111) ? 2'b01 : 1'b00;
-            hi_write = 1'b0;
-            lo_write = 1'b0;
+//            hi_write = 1'b0;
+//            lo_write = 1'b0;
             r_spec_regs = 2'b11;
             w_spec_regs = 2'b10;
             halt = 1'b0;
@@ -139,8 +139,8 @@ always @(*) begin
             regWrite = (funct == 3'b000 || funct == 3'b001 || funct == 3'b010 || funct == 3'b011)? 1'b1 : 1'b0;
             memToReg = 1'b0;
             PCSrc = 2'b00;
-            hi_write = 1'b0;
-            lo_write = 1'b0;
+//            hi_write = 1'b0;
+//            lo_write = 1'b0;
             r_spec_regs = 2'b11;
             w_spec_regs = 2'b10;
             halt = 1'b0;
@@ -162,8 +162,8 @@ always @(*) begin
             regWrite = 1'b1;
             memToReg = 1'b0;
             PCSrc = 2'b00;
-            hi_write = 1'b0;
-            lo_write = 1'b0;
+//            hi_write = 1'b0;
+//            lo_write = 1'b0;
             r_spec_regs = 2'b11;
             w_spec_regs = 2'b10;
             halt = 1'b0;
@@ -180,8 +180,8 @@ always @(*) begin
             memToReg = 1'b0;
             PCSrc = 2'b00;
 //                mult_div <= 1'b0;
-            hi_write = 1'b0;
-            lo_write = 1'b0;
+//            hi_write = 1'b0;
+//            lo_write = 1'b0;
             r_spec_regs = 2'b11;
             w_spec_regs = 2'b10;
             halt = 1'b0;
@@ -198,8 +198,8 @@ always @(*) begin
             memToReg = 1'b0; 
             PCSrc = 2'b10;
 //                mult_div <= 1'b0;
-            hi_write = 1'b0;
-            lo_write = 1'b0;
+//            hi_write = 1'b0;
+//            lo_write = 1'b0;
             r_spec_regs = 2'b11;
             w_spec_regs = 2'b10;
             halt = 1'b0;
@@ -216,8 +216,8 @@ always @(*) begin
             memToReg = 1'b0; // = x
             PCSrc = 2'b10;
 //                mult_div <= 1'b0;
-            hi_write = 1'b0;
-            lo_write = 1'b0;
+//            hi_write = 1'b0;
+//            lo_write = 1'b0;
             r_spec_regs = 2'b11;
             w_spec_regs = 2'b10;
             halt = 1'b0;
@@ -234,8 +234,8 @@ always @(*) begin
             memToReg = 1'b0; //x
             PCSrc = 2'b11;
 //                mult_div <= 1'b0;
-            hi_write = 1'b0;
-            lo_write = 1'b0;
+//            hi_write = 1'b0;
+//            lo_write = 1'b0;
             r_spec_regs = 2'b11;
             w_spec_regs = 2'b10;
             halt = 1'b0;
@@ -252,8 +252,8 @@ always @(*) begin
             memToReg = 1'b1;
             PCSrc = 2'b00;
 //                mult_div <= 1'b0;
-            hi_write = 1'b0;
-            lo_write = 1'b0;
+//            hi_write = 1'b0;
+//            lo_write = 1'b0;
             r_spec_regs = 2'b11;
             w_spec_regs = 2'b10;
             halt = 1'b0;
@@ -270,8 +270,8 @@ always @(*) begin
             memToReg = 1'b0; 
             PCSrc = 2'b00;
 //                mult_div <= 1'b0;
-            hi_write = 1'b0;
-            lo_write = 1'b0;
+//            hi_write = 1'b0;
+//            lo_write = 1'b0;
             r_spec_regs = 2'b11;
             w_spec_regs = 2'b10;
             halt = 1'b0;
@@ -288,8 +288,8 @@ always @(*) begin
             memToReg = 1'b0;
             PCSrc = 1'b00;  
 //                mult_div <= 1'b0; 
-            hi_write = 1'b0;
-            lo_write = 1'b0;
+//            hi_write = 1'b0;
+//            lo_write = 1'b0;
             halt = 1'b0;
             is_jump = 1'b0;
             case (funct)
@@ -347,12 +347,12 @@ always @(*) begin
                 end
                 3'b100: begin
                     w_spec_regs = 2'b10;
-                    hi_write = 1'b1;
+//                    hi_write = 1'b1;
                     ALU_cnt = 6'b100100; // mthi
                 end
                 3'b101: begin
                     w_spec_regs = 2'b10;
-                    lo_write = 1'b1;
+//                    lo_write = 1'b1;
                     ALU_cnt = 6'b100101; // mtlo
                 end
                 default: begin
@@ -372,8 +372,8 @@ always @(*) begin
             PCSrc = 2'b00;
             memRead = 1'b0;
 //                mult_div <= 1'b0;
-            hi_write = 1'b0;
-            lo_write = 1'b0;
+//            hi_write = 1'b0;
+//            lo_write = 1'b0;
             w_spec_regs = 2'b10;
             r_spec_regs = 2'b11; 
             halt = 1'b1;

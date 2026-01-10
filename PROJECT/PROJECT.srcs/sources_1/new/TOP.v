@@ -37,7 +37,7 @@ module TOP(
     wire IF_ID_Write;
     
     wire ID_regDst, ID_ALUSrc, ID_memRead, ID_memWrite;
-    wire ID_regWrite, ID_memToReg, ID_hi_write, ID_lo_write, ID_halt;
+    wire ID_regWrite, ID_memToReg, ID_halt;
     wire [1:0] ID_PCSrc;
     wire [5:0] ID_ALU_cnt;
     wire [1:0] ID_r_spec_regs, ID_w_spec_regs;
@@ -60,7 +60,7 @@ module TOP(
     wire [1:0] EX_PCSrc;
     wire [1:0] EX_r_spec_regs, EX_w_spec_regs;
     wire EX_regDst, EX_ALUSrc, EX_memWrite, EX_memRead;
-    wire EX_regWrite, EX_memToReg, EX_hi_write, EX_lo_write, EX_halt;
+    wire EX_regWrite, EX_memToReg, EX_halt;
     wire branch_taken;
 
     wire [15:0] EX_pc, EX_pc_plus;
@@ -78,7 +78,7 @@ module TOP(
     wire MEM_memWrite, MEM_memRead, MEM_regWrite, MEM_memToReg;
     wire [1:0] MEM_PCSrc;
     wire [1:0] MEM_w_spec_regs;
-    wire MEM_hi_write, MEM_lo_write, MEM_halt;
+    wire MEM_halt;
     
     wire [15:0] MEM_pc, MEM_pc_plus;
     wire [15:0] MEM_alu_result;
@@ -188,8 +188,8 @@ module TOP(
         .memToReg(ID_memToReg),
         .PCSrc(ID_PCSrc),
         .ALU_cnt(ID_ALU_cnt),
-        .hi_write(ID_hi_write),
-        .lo_write(ID_lo_write),
+//        .hi_write(ID_hi_write),
+//        .lo_write(ID_lo_write),
         .r_spec_regs(ID_r_spec_regs),
         .w_spec_regs(ID_w_spec_regs),
         .halt(ID_halt),
@@ -230,8 +230,8 @@ module TOP(
         .ID_memRead(ID_memRead),
         .ID_regWrite(ID_regWrite),
         .ID_memToReg(ID_memToReg),
-        .ID_hi_write(ID_hi_write),
-        .ID_lo_write(ID_lo_write),
+//        .ID_hi_write(ID_hi_write),
+//        .ID_lo_write(ID_lo_write),
         .ID_halt(ID_halt),
         
         // Data signals
@@ -256,8 +256,8 @@ module TOP(
         .EX_memRead(EX_memRead),
         .EX_regWrite(EX_regWrite),
         .EX_memToReg(EX_memToReg),
-        .EX_hi_write(EX_hi_write),
-        .EX_lo_write(EX_lo_write),
+//        .EX_hi_write(EX_hi_write),
+//        .EX_lo_write(EX_lo_write),
         .EX_halt(EX_halt),
         .EX_pc(EX_pc),
         .EX_pc_plus(EX_pc_plus),
@@ -330,8 +330,8 @@ module TOP(
         .EX_regWrite(EX_regWrite),
         .EX_memtoReg(EX_memToReg),
         .EX_w_spec_regs(EX_w_spec_regs),
-        .EX_hi_write(EX_hi_write),
-        .EX_lo_write(EX_lo_write),
+//        .EX_hi_write(EX_hi_write),
+//        .EX_lo_write(EX_lo_write),
         .EX_halt(EX_halt),
         
         .EX_PCSrc(EX_PCSrc),
@@ -350,8 +350,8 @@ module TOP(
         .MEM_regWrite(MEM_regWrite),
         .MEM_memtoReg(MEM_memToReg),
         .MEM_w_spec_regs(MEM_w_spec_regs),
-        .MEM_hi_write(MEM_hi_write),
-        .MEM_lo_write(MEM_lo_write),
+//        .MEM_hi_write(MEM_hi_write),
+//        .MEM_lo_write(MEM_lo_write),
         .MEM_halt(MEM_halt),
         .MEM_pc(MEM_pc),
         .MEM_pc_plus(MEM_pc_plus),
