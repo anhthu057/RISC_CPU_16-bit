@@ -6,7 +6,7 @@ Time resolution is 1 ps
                CYCLE 1 (Time=25000)
 ===============================================================
 IF STAGE:
-  PC = 0x0000 | Instruction = 0x3ec3
+  PC = 0x0000 | Instruction = 0x3e41
   pc next = 0x0002 | branch taken = 0 | jump = 0 | PCSrc = 00
 ID STAGE:
   PC = 0x0000 | Instruction = 0xc000
@@ -31,7 +31,7 @@ MEM STAGE:
   Memory: Read=0 Write=0 | Data = 0x0000
   Read Data = 0x0000
   Reg_write = 0 | w_spec_regs=10
-  branch_target = 0000 | PCSrc = 00
+  branch_target = 0000 | PCSrc = zz
 WB STAGE:
   Write Reg = R0 | Write Data = 0x0000
   RegWrite = 0 | MemToReg = 0
@@ -44,14 +44,14 @@ FINAL RESULT = 0x0000 (0)
                CYCLE 2 (Time=35000)
 ===============================================================
 IF STAGE:
-  PC = 0x0002 | Instruction = 0x3f04
+  PC = 0x0002 | Instruction = 0x3e82
   pc next = 0x0004 | branch taken = 0 | jump = 0 | PCSrc = 00
 ID STAGE:
-  PC = 0x0000 | Instruction = 0x3ec3
-  RS = R7 | RT = R3 | RD = R0
+  PC = 0x0000 | Instruction = 0x3e41
+  RS = R7 | RT = R1 | RD = R0
   RD1 = 0x0000 | RD2 = 0x0000
   Control: RegWrite=1 MemRead=0 MemWrite=0 ALUSrc=1 ALUCount=101000 w_spec_regs=10
-  Address = 0006
+  Address = 0002
  regFile 0000
 EX STAGE:
   PC = 0x0000
@@ -69,7 +69,7 @@ MEM STAGE:
   Memory: Read=0 Write=0 | Data = 0x0000
   Read Data = 0x0000
   Reg_write = 0 | w_spec_regs=10
-  branch_target = 0000 | PCSrc = 00
+  branch_target = 0000 | PCSrc = zz
 WB STAGE:
   Write Reg = R0 | Write Data = 0x0000
   RegWrite = 0 | MemToReg = 0
@@ -82,32 +82,32 @@ FINAL RESULT = 0x0000 (0)
                CYCLE 3 (Time=45000)
 ===============================================================
 IF STAGE:
-  PC = 0x0004 | Instruction = 0xb0c4
+  PC = 0x0004 | Instruction = 0x1458
   pc next = 0x0006 | branch taken = 0 | jump = 0 | PCSrc = 00
 ID STAGE:
-  PC = 0x0002 | Instruction = 0x3f04
-  RS = R7 | RT = R4 | RD = R0
+  PC = 0x0002 | Instruction = 0x3e82
+  RS = R7 | RT = R2 | RD = R0
   RD1 = 0x0000 | RD2 = 0x0000
   Control: RegWrite=1 MemRead=0 MemWrite=0 ALUSrc=1 ALUCount=101000 w_spec_regs=10
-  Address = 000a
+  Address = 0006
  regFile 0000
 EX STAGE:
   PC = 0x0000
-  RS = R7 | RT = R3 | RD = R3
+  RS = R7 | RT = R1 | RD = R1
   Operand1 = 0x0000 | Operand2 = 0x0000
-  signed_op1 = 0x0000 | signed_op2 = 0x0003
-  ALU Result = 0x0003 | Zero = 0
+  signed_op1 = 0x0000 | signed_op2 = 0x0001
+  ALU Result = 0x0001 | Zero = 0
   Forward: A=00 B=00
   w_spec_regs=10
   hi = 0 | lo = 0
-  branch_target = 0006 | PCSrc = 00
+  branch_target = 0002 | PCSrc = 00
 MEM STAGE:
   PC = 0x0000
   ALU Result = 0xxxxx | Write Reg = R0
   Memory: Read=0 Write=0 | Data = 0x0000
   Read Data = 0x0000
   Reg_write = 0 | w_spec_regs=10
-  branch_target = 0000 | PCSrc = 00
+  branch_target = 0000 | PCSrc = zz
 WB STAGE:
   Write Reg = R0 | Write Data = 0xxxxx
   RegWrite = 0 | MemToReg = 0
@@ -120,32 +120,32 @@ FINAL RESULT = 0xxxxx (x)
                CYCLE 4 (Time=55000)
 ===============================================================
 IF STAGE:
-  PC = 0x0006 | Instruction = 0xb105
+  PC = 0x0006 | Instruction = 0x94c0
   pc next = 0x0008 | branch taken = 0 | jump = 0 | PCSrc = 00
 ID STAGE:
-  PC = 0x0004 | Instruction = 0xb0c4
-  RS = R0 | RT = R3 | RD = R0
+  PC = 0x0004 | Instruction = 0x1458
+  RS = R2 | RT = R1 | RD = R3
   RD1 = 0x0000 | RD2 = 0x0000
-  Control: RegWrite=0 MemRead=0 MemWrite=0 ALUSrc=0 ALUCount=100100 w_spec_regs=10
-  Address = 000c
+  Control: RegWrite=1 MemRead=0 MemWrite=0 ALUSrc=0 ALUCount=001000 w_spec_regs=10
+  Address = 0034
  regFile 0000
 EX STAGE:
   PC = 0x0002
-  RS = R7 | RT = R4 | RD = R4
+  RS = R7 | RT = R2 | RD = R2
   Operand1 = 0x0000 | Operand2 = 0x0000
-  signed_op1 = 0x0000 | signed_op2 = 0x0004
-  ALU Result = 0x0004 | Zero = 0
+  signed_op1 = 0x0000 | signed_op2 = 0x0002
+  ALU Result = 0x0002 | Zero = 0
   Forward: A=00 B=00
   w_spec_regs=10
   hi = 0 | lo = 0
-  branch_target = 000a | PCSrc = 00
+  branch_target = 0006 | PCSrc = 00
 MEM STAGE:
   PC = 0x0000
-  ALU Result = 0x0003 | Write Reg = R3
+  ALU Result = 0x0001 | Write Reg = R1
   Memory: Read=0 Write=0 | Data = 0x0000
   Read Data = 0x0000
   Reg_write = 1 | w_spec_regs=10
-  branch_target = 0000 | PCSrc = 00
+  branch_target = 0000 | PCSrc = zz
 WB STAGE:
   Write Reg = R0 | Write Data = 0xxxxx
   RegWrite = 0 | MemToReg = 0
@@ -158,79 +158,79 @@ FINAL RESULT = 0xxxxx (x)
                CYCLE 5 (Time=65000)
 ===============================================================
 IF STAGE:
-  PC = 0x0008 | Instruction = 0xa024
+  PC = 0x0008 | Instruction = 0x8580
   pc next = 0x000a | branch taken = 0 | jump = 0 | PCSrc = 00
 ID STAGE:
-  PC = 0x0006 | Instruction = 0xb105
-  RS = R0 | RT = R4 | RD = R0
+  PC = 0x0006 | Instruction = 0x94c0
+  RS = R2 | RT = R3 | RD = R0
   RD1 = 0x0000 | RD2 = 0x0000
-  Control: RegWrite=0 MemRead=0 MemWrite=0 ALUSrc=0 ALUCount=100101 w_spec_regs=10
-  Address = 0010
+  Control: RegWrite=0 MemRead=0 MemWrite=1 ALUSrc=1 ALUCount=101101 w_spec_regs=10
+  Address = 0006
  regFile 0000
 EX STAGE:
   PC = 0x0004
-  RS = R0 | RT = R3 | RD = R0
+  RS = R2 | RT = R1 | RD = R3
   Operand1 = 0x0000 | Operand2 = 0x0000
-  signed_op1 = 0x0000 | signed_op2 = 0x0003
-  ALU Result = 0x0000 | Zero = 0
-  Forward: A=00 B=01
+  signed_op1 = 0x0002 | signed_op2 = 0x0001
+  ALU Result = 0x0003 | Zero = 0
+  Forward: A=10 B=01
   w_spec_regs=10
-  hi = 3 | lo = 0
-  branch_target = 000c | PCSrc = 00
+  hi = 0 | lo = 0
+  branch_target = 0034 | PCSrc = 00
 MEM STAGE:
   PC = 0x0002
-  ALU Result = 0x0004 | Write Reg = R4
+  ALU Result = 0x0002 | Write Reg = R2
   Memory: Read=0 Write=0 | Data = 0x0000
   Read Data = 0x0000
   Reg_write = 1 | w_spec_regs=10
-  branch_target = 0000 | PCSrc = 00
+  branch_target = 0002 | PCSrc = zz
 WB STAGE:
-  Write Reg = R3 | Write Data = 0x0003
+  Write Reg = R1 | Write Data = 0x0001
   RegWrite = 1 | MemToReg = 0
   Halt = 0
   w_spec_regs=10
-FINAL RESULT = 0x0003 (3)
+FINAL RESULT = 0x0001 (1)
 ===============================================================
->>> Register Write: R3 <= 0x0003
+>>> Register Write: R1 <= 0x0001
 
 ===============================================================
                CYCLE 6 (Time=75000)
 ===============================================================
 IF STAGE:
-  PC = 0x000a | Instruction = 0xa025
+  PC = 0x000a | Instruction = 0x3d02
   pc next = 0x000c | branch taken = 0 | jump = 0 | PCSrc = 00
 ID STAGE:
-  PC = 0x0008 | Instruction = 0xa024
-  RS = R0 | RT = R0 | RD = R4
-  RD1 = 0x0000 | RD2 = 0x0000
-  Control: RegWrite=1 MemRead=0 MemWrite=0 ALUSrc=0 ALUCount=011100 w_spec_regs=10
-  Address = ffd0
+  PC = 0x0008 | Instruction = 0x8580
+  RS = R2 | RT = R6 | RD = R0
+  RD1 = 0x0002 | RD2 = 0x0000
+  Control: RegWrite=1 MemRead=1 MemWrite=0 ALUSrc=1 ALUCount=101100 w_spec_regs=10
+  Address = 0008
  regFile 0000
 EX STAGE:
   PC = 0x0006
-  RS = R0 | RT = R4 | RD = R0
+  RS = R2 | RT = R3 | RD = R3
   Operand1 = 0x0000 | Operand2 = 0x0000
-  signed_op1 = 0x0000 | signed_op2 = 0x0004
-  ALU Result = 0x0000 | Zero = 0
-  Forward: A=00 B=01
+  signed_op1 = 0x0002 | signed_op2 = 0x0000
+  ALU Result = 0x0002 | Zero = 0
+  Forward: A=01 B=10
   w_spec_regs=10
-  hi = 3 | lo = 4
-  branch_target = 0010 | PCSrc = 00
+  hi = 0 | lo = 0
+  branch_target = 0006 | PCSrc = 00
 MEM STAGE:
   PC = 0x0004
-  ALU Result = 0x0000 | Write Reg = R0
-  Memory: Read=0 Write=0 | Data = 0x0003
+  ALU Result = 0x0003 | Write Reg = R3
+  Memory: Read=0 Write=0 | Data = 0x0001
   Read Data = 0x0000
-  Reg_write = 0 | w_spec_regs=10
-  branch_target = 0000 | PCSrc = 00
+  Reg_write = 1 | w_spec_regs=10
+  branch_target = 0002 | PCSrc = zz
 WB STAGE:
-  Write Reg = R4 | Write Data = 0x0004
+  Write Reg = R2 | Write Data = 0x0002
   RegWrite = 1 | MemToReg = 0
   Halt = 0
   w_spec_regs=10
-FINAL RESULT = 0x0004 (4)
+FINAL RESULT = 0x0002 (2)
 ===============================================================
->>> Register Write: R4 <= 0x0004
+>>> Register Write: R2 <= 0x0002
 
 ===============================================================
                CYCLE 7 (Time=85000)
@@ -239,39 +239,81 @@ IF STAGE:
   PC = 0x000c | Instruction = 0xxxxx
   pc next = 0x000e | branch taken = 0 | jump = 0 | PCSrc = 00
 ID STAGE:
-  PC = 0x000a | Instruction = 0xa025
-  RS = R0 | RT = R0 | RD = R4
+  PC = 0x000a | Instruction = 0x3d02
+  RS = R6 | RT = R4 | RD = R0
   RD1 = 0x0000 | RD2 = 0x0000
-  Control: RegWrite=1 MemRead=0 MemWrite=0 ALUSrc=0 ALUCount=011101 w_spec_regs=10
-  Address = ffd4
+  Control: RegWrite=0 MemRead=0 MemWrite=0 ALUSrc=0 ALUCount=111111 w_spec_regs=10
+  Address = 000e
  regFile 0000
 EX STAGE:
   PC = 0x0008
-  RS = R0 | RT = R0 | RD = R4
-  Operand1 = 0x0000 | Operand2 = 0x0000
-  signed_op1 = 0x0000 | signed_op2 = 0x0000
-  ALU Result = 0x0003 | Zero = 0
+  RS = R2 | RT = R6 | RD = R6
+  Operand1 = 0x0002 | Operand2 = 0x0000
+  signed_op1 = 0x0002 | signed_op2 = 0x0000
+  ALU Result = 0x0002 | Zero = 0
   Forward: A=00 B=00
   w_spec_regs=10
-  hi = 3 | lo = 4
-  branch_target = ffd0 | PCSrc = 00
+  hi = 0 | lo = 0
+  branch_target = 0008 | PCSrc = 00
 MEM STAGE:
   PC = 0x0006
-  ALU Result = 0x0000 | Write Reg = R0
-  Memory: Read=0 Write=0 | Data = 0x0004
+  ALU Result = 0x0002 | Write Reg = R3
+  Memory: Read=0 Write=1 | Data = 0x0003
   Read Data = 0x0000
   Reg_write = 0 | w_spec_regs=10
-  branch_target = 0000 | PCSrc = 00
+  branch_target = 0002 | PCSrc = zz
 WB STAGE:
-  Write Reg = R0 | Write Data = 0x0000
-  RegWrite = 0 | MemToReg = 0
+  Write Reg = R3 | Write Data = 0x0003
+  RegWrite = 1 | MemToReg = 0
   Halt = 0
   w_spec_regs=10
-FINAL RESULT = 0x0000 (0)
+FINAL RESULT = 0x0003 (3)
 ===============================================================
+*** PIPELINE STALL DETECTED! ***
+>>> Register Write: R3 <= 0x0003
+>>> Memory Write: MEM[0x0002] <= 0x0003
 
 ===============================================================
                CYCLE 8 (Time=95000)
+===============================================================
+IF STAGE:
+  PC = 0x000c | Instruction = 0xxxxx
+  pc next = 0x000e | branch taken = 0 | jump = 0 | PCSrc = 00
+ID STAGE:
+  PC = 0x000a | Instruction = 0x3d02
+  RS = R6 | RT = R4 | RD = R0
+  RD1 = 0x0000 | RD2 = 0x0000
+  Control: RegWrite=1 MemRead=0 MemWrite=0 ALUSrc=1 ALUCount=101000 w_spec_regs=10
+  Address = 000e
+ regFile 0000
+EX STAGE:
+  PC = 0x000a
+  RS = R6 | RT = R4 | RD = R4
+  Operand1 = 0x0000 | Operand2 = 0x0000
+  signed_op1 = 0x0002 | signed_op2 = 0x0000
+  ALU Result = 0xxxxx | Zero = 0
+  Forward: A=10 B=00
+  w_spec_regs=10
+  hi = 0 | lo = 0
+  branch_target = 000e | PCSrc = 00
+MEM STAGE:
+  PC = 0x0008
+  ALU Result = 0x0002 | Write Reg = R6
+  Memory: Read=1 Write=0 | Data = 0x0000
+  Read Data = 0x0003
+  Reg_write = 1 | w_spec_regs=10
+  branch_target = 0002 | PCSrc = zz
+WB STAGE:
+  Write Reg = R3 | Write Data = 0x0002
+  RegWrite = 0 | MemToReg = 0
+  Halt = 0
+  w_spec_regs=10
+FINAL RESULT = 0x0002 (2)
+===============================================================
+>>> Memory Read: MEM[0x0002] => 0x0003
+
+===============================================================
+               CYCLE 9 (Time=105000)
 ===============================================================
 IF STAGE:
   PC = 0x000e | Instruction = 0xxxxx
@@ -285,31 +327,32 @@ ID STAGE:
  regFile 0000
 EX STAGE:
   PC = 0x000a
-  RS = R0 | RT = R0 | RD = R4
+  RS = R6 | RT = R4 | RD = R4
   Operand1 = 0x0000 | Operand2 = 0x0000
-  signed_op1 = 0x0000 | signed_op2 = 0x0000
-  ALU Result = 0x0004 | Zero = 0
-  Forward: A=00 B=00
+  signed_op1 = 0x0003 | signed_op2 = 0x0002
+  ALU Result = 0x0005 | Zero = 0
+  Forward: A=01 B=00
   w_spec_regs=10
-  hi = 3 | lo = 4
-  branch_target = ffd4 | PCSrc = 00
+  hi = 0 | lo = 0
+  branch_target = 000e | PCSrc = 00
 MEM STAGE:
-  PC = 0x0008
-  ALU Result = 0x0003 | Write Reg = R4
+  PC = 0x000a
+  ALU Result = 0xxxxx | Write Reg = R4
   Memory: Read=0 Write=0 | Data = 0x0000
   Read Data = 0x0000
-  Reg_write = 1 | w_spec_regs=10
-  branch_target = 0000 | PCSrc = 00
+  Reg_write = 0 | w_spec_regs=10
+  branch_target = 0003 | PCSrc = zz
 WB STAGE:
-  Write Reg = R0 | Write Data = 0x0000
-  RegWrite = 0 | MemToReg = 0
+  Write Reg = R6 | Write Data = 0x0003
+  RegWrite = 1 | MemToReg = 1
   Halt = 0
   w_spec_regs=10
-FINAL RESULT = 0x0000 (0)
+FINAL RESULT = 0x0003 (3)
 ===============================================================
+>>> Register Write: R6 <= 0x0003
 
 ===============================================================
-               CYCLE 9 (Time=105000)
+               CYCLE 10 (Time=115000)
 ===============================================================
 IF STAGE:
   PC = 0x0010 | Instruction = 0xxxxx
@@ -329,26 +372,25 @@ EX STAGE:
   ALU Result = 0xxxxx | Zero = 0
   Forward: A=00 B=00
   w_spec_regs=10
-  hi = 3 | lo = 4
+  hi = 0 | lo = 0
   branch_target = xxxx | PCSrc = 00
 MEM STAGE:
   PC = 0x000a
-  ALU Result = 0x0004 | Write Reg = R4
+  ALU Result = 0x0005 | Write Reg = R4
   Memory: Read=0 Write=0 | Data = 0x0000
   Read Data = 0x0000
   Reg_write = 1 | w_spec_regs=10
-  branch_target = xxxx | PCSrc = 00
+  branch_target = xxxx | PCSrc = zz
 WB STAGE:
-  Write Reg = R4 | Write Data = 0x0003
-  RegWrite = 1 | MemToReg = 0
+  Write Reg = R4 | Write Data = 0xxxxx
+  RegWrite = 0 | MemToReg = 0
   Halt = 0
   w_spec_regs=10
-FINAL RESULT = 0x0003 (3)
+FINAL RESULT = 0xxxxx (x)
 ===============================================================
->>> Register Write: R4 <= 0x0003
 
 ===============================================================
-               CYCLE 10 (Time=115000)
+               CYCLE 11 (Time=125000)
 ===============================================================
 IF STAGE:
   PC = 0x0012 | Instruction = 0xxxxx
@@ -368,7 +410,7 @@ EX STAGE:
   ALU Result = 0xxxxx | Zero = 0
   Forward: A=00 B=00
   w_spec_regs=10
-  hi = 3 | lo = 4
+  hi = 0 | lo = 0
   branch_target = xxxx | PCSrc = 00
 MEM STAGE:
   PC = 0x000c
@@ -376,18 +418,18 @@ MEM STAGE:
   Memory: Read=0 Write=0 | Data = 0xxxxx
   Read Data = 0x0000
   Reg_write = 0 | w_spec_regs=10
-  branch_target = xxxx | PCSrc = 00
+  branch_target = xxxx | PCSrc = zz
 WB STAGE:
-  Write Reg = R4 | Write Data = 0x0004
+  Write Reg = R4 | Write Data = 0x0005
   RegWrite = 1 | MemToReg = 0
   Halt = 0
   w_spec_regs=10
-FINAL RESULT = 0x0004 (4)
+FINAL RESULT = 0x0005 (5)
 ===============================================================
->>> Register Write: R4 <= 0x0004
+>>> Register Write: R4 <= 0x0005
 
 ===============================================================
-               CYCLE 11 (Time=125000)
+               CYCLE 12 (Time=135000)
 ===============================================================
 IF STAGE:
   PC = 0x0014 | Instruction = 0xxxxx
@@ -407,7 +449,7 @@ EX STAGE:
   ALU Result = 0xxxxx | Zero = 0
   Forward: A=00 B=00
   w_spec_regs=10
-  hi = 3 | lo = 4
+  hi = 0 | lo = 0
   branch_target = xxxx | PCSrc = 00
 MEM STAGE:
   PC = 0x000e
@@ -415,7 +457,7 @@ MEM STAGE:
   Memory: Read=0 Write=0 | Data = 0xxxxx
   Read Data = 0x0000
   Reg_write = 0 | w_spec_regs=10
-  branch_target = xxxx | PCSrc = 00
+  branch_target = xxxx | PCSrc = zz
 WB STAGE:
   Write Reg = Rx | Write Data = 0xxxxx
   RegWrite = 0 | MemToReg = 0
@@ -425,7 +467,7 @@ FINAL RESULT = 0xxxxx (x)
 ===============================================================
 
 ===============================================================
-               CYCLE 12 (Time=135000)
+               CYCLE 13 (Time=145000)
 ===============================================================
 IF STAGE:
   PC = 0x0016 | Instruction = 0xxxxx
@@ -445,7 +487,7 @@ EX STAGE:
   ALU Result = 0xxxxx | Zero = 0
   Forward: A=00 B=00
   w_spec_regs=10
-  hi = 3 | lo = 4
+  hi = 0 | lo = 0
   branch_target = xxxx | PCSrc = 00
 MEM STAGE:
   PC = 0x0010
@@ -453,7 +495,7 @@ MEM STAGE:
   Memory: Read=0 Write=0 | Data = 0xxxxx
   Read Data = 0x0000
   Reg_write = 0 | w_spec_regs=10
-  branch_target = xxxx | PCSrc = 00
+  branch_target = xxxx | PCSrc = zz
 WB STAGE:
   Write Reg = Rx | Write Data = 0xxxxx
   RegWrite = 0 | MemToReg = 0
@@ -463,7 +505,7 @@ FINAL RESULT = 0xxxxx (x)
 ===============================================================
 
 ===============================================================
-               CYCLE 13 (Time=145000)
+               CYCLE 14 (Time=155000)
 ===============================================================
 IF STAGE:
   PC = 0x0018 | Instruction = 0xxxxx
@@ -483,7 +525,7 @@ EX STAGE:
   ALU Result = 0xxxxx | Zero = 0
   Forward: A=00 B=00
   w_spec_regs=10
-  hi = 3 | lo = 4
+  hi = 0 | lo = 0
   branch_target = xxxx | PCSrc = 00
 MEM STAGE:
   PC = 0x0012
@@ -491,7 +533,7 @@ MEM STAGE:
   Memory: Read=0 Write=0 | Data = 0xxxxx
   Read Data = 0x0000
   Reg_write = 0 | w_spec_regs=10
-  branch_target = xxxx | PCSrc = 00
+  branch_target = xxxx | PCSrc = zz
 WB STAGE:
   Write Reg = Rx | Write Data = 0xxxxx
   RegWrite = 0 | MemToReg = 0
@@ -501,7 +543,7 @@ FINAL RESULT = 0xxxxx (x)
 ===============================================================
 
 ===============================================================
-               CYCLE 14 (Time=155000)
+               CYCLE 15 (Time=165000)
 ===============================================================
 IF STAGE:
   PC = 0x001a | Instruction = 0xxxxx
@@ -521,7 +563,7 @@ EX STAGE:
   ALU Result = 0xxxxx | Zero = 0
   Forward: A=00 B=00
   w_spec_regs=10
-  hi = 3 | lo = 4
+  hi = 0 | lo = 0
   branch_target = xxxx | PCSrc = 00
 MEM STAGE:
   PC = 0x0014
@@ -529,45 +571,7 @@ MEM STAGE:
   Memory: Read=0 Write=0 | Data = 0xxxxx
   Read Data = 0x0000
   Reg_write = 0 | w_spec_regs=10
-  branch_target = xxxx | PCSrc = 00
-WB STAGE:
-  Write Reg = Rx | Write Data = 0xxxxx
-  RegWrite = 0 | MemToReg = 0
-  Halt = 0
-  w_spec_regs=10
-FINAL RESULT = 0xxxxx (x)
-===============================================================
-
-===============================================================
-               CYCLE 15 (Time=165000)
-===============================================================
-IF STAGE:
-  PC = 0x001c | Instruction = 0xxxxx
-  pc next = 0x001e | branch taken = 0 | jump = 0 | PCSrc = 00
-ID STAGE:
-  PC = 0x001a | Instruction = 0xxxxx
-  RS = Rx | RT = Rx | RD = Rx
-  RD1 = 0xxxxx | RD2 = 0xxxxx
-  Control: RegWrite=0 MemRead=0 MemWrite=0 ALUSrc=0 ALUCount=111111 w_spec_regs=10
-  Address = xxxx
- regFile 0000
-EX STAGE:
-  PC = 0x0018
-  RS = Rx | RT = Rx | RD = Rx
-  Operand1 = 0xxxxx | Operand2 = 0xxxxx
-  signed_op1 = 0xxxxx | signed_op2 = 0xxxxx
-  ALU Result = 0xxxxx | Zero = 0
-  Forward: A=00 B=00
-  w_spec_regs=10
-  hi = 3 | lo = 4
-  branch_target = xxxx | PCSrc = 00
-MEM STAGE:
-  PC = 0x0016
-  ALU Result = 0xxxxx | Write Reg = Rx
-  Memory: Read=0 Write=0 | Data = 0xxxxx
-  Read Data = 0x0000
-  Reg_write = 0 | w_spec_regs=10
-  branch_target = xxxx | PCSrc = 00
+  branch_target = xxxx | PCSrc = zz
 WB STAGE:
   Write Reg = Rx | Write Data = 0xxxxx
   RegWrite = 0 | MemToReg = 0

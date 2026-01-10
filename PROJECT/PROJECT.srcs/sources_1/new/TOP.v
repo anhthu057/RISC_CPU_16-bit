@@ -334,14 +334,14 @@ module TOP(
 //        .EX_lo_write(EX_lo_write),
         .EX_halt(EX_halt),
         
-        .EX_PCSrc(EX_PCSrc),
+//        .EX_PCSrc(EX_PCSrc),
         
         // Data signals
         .EX_pc(EX_pc),
         .EX_pc_plus(EX_pc_plus),
         .EX_alu_result(EX_alu_result),
         .EX_rd2(EX_forward_rd2),       // Forwarded data cho SW
-        .EX_br_target(EX_br_target),
+//        .EX_br_target(EX_br_target),
         .EX_write_reg(EX_rd),          // Destination register
         
         // Outputs
@@ -357,10 +357,10 @@ module TOP(
         .MEM_pc_plus(MEM_pc_plus),
         .MEM_alu_result(MEM_alu_result),
         .MEM_rd2(MEM_rd2),
-        .MEM_br_target(MEM_br_target),
-        .MEM_write_reg(MEM_write_reg),
+//        .MEM_br_target(MEM_br_target),
+        .MEM_write_reg(MEM_write_reg)
         
-        .MEM_PCSrc(MEM_PCSrc)
+//        .MEM_PCSrc(MEM_PCSrc)
     );
     
     //==========================================================================

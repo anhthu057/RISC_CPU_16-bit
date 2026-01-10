@@ -25,7 +25,7 @@ module EX_MEM_Register(
     input wire rst,
     
     // tu ex stage
-    input wire [1:0] EX_PCSrc,
+//    input wire [1:0] EX_PCSrc,
     input wire EX_memWrite,
     input wire EX_memRead,
     input wire EX_regWrite,
@@ -39,7 +39,7 @@ module EX_MEM_Register(
     input wire [15:0] EX_pc_plus, //
     input wire [15:0] EX_alu_result, // ket qua alu
     input wire [15:0] EX_rd2, // data tu rt cho sw
-    input wire [15:0] EX_br_target, 
+//    input wire [15:0] EX_br_target, 
     input wire [2:0] EX_write_reg, // destination ne
     
     
@@ -56,15 +56,14 @@ module EX_MEM_Register(
     output reg [15:0] MEM_pc_plus,
     output reg [15:0] MEM_alu_result,
     output reg [15:0] MEM_rd2,
-    output reg [15:0] MEM_br_target,
-    output reg [2:0] MEM_write_reg,
-    output reg [1:0] MEM_PCSrc
-    
+//    output reg [15:0] MEM_br_target,
+    output reg [2:0] MEM_write_reg
+//    output reg [1:0] MEM_PCSrc    
     );
     
     always @(posedge clk or posedge rst) begin
         if (rst) begin
-            MEM_PCSrc <= 2'b00;
+//            MEM_PCSrc <= 2'b00;
             MEM_memWrite <= 1'b0;
             MEM_memRead <= 1'b0;
             MEM_regWrite <= 1'b0;
@@ -78,12 +77,12 @@ module EX_MEM_Register(
             MEM_pc_plus <= 16'h0000;
             MEM_alu_result <= 16'h0000;
             MEM_rd2 <= 16'h0000;
-            MEM_br_target <= 16'h0000;
+//            MEM_br_target <= 16'h0000;
             MEM_write_reg <= 3'b000;
         end
         
         else begin
-            MEM_PCSrc <= EX_PCSrc;
+//            MEM_PCSrc <= EX_PCSrc;
             MEM_memWrite <= EX_memWrite;
             MEM_memRead <= EX_memRead;
             MEM_regWrite <= EX_regWrite;
@@ -97,7 +96,7 @@ module EX_MEM_Register(
             MEM_pc_plus <= EX_pc_plus;
             MEM_alu_result <= EX_alu_result;
             MEM_rd2 <= EX_rd2;
-            MEM_br_target <= EX_br_target;
+//            MEM_br_target <= EX_br_target;
             MEM_write_reg <= EX_write_reg;
         end
     end
